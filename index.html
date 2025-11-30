@@ -1,0 +1,1405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ads Booster - Complete Digital Promotion Suite for Small Businesses</title>
+    <style>
+        /* Design System Variables */
+        :root {
+            --color-white: rgba(255, 255, 255, 1);
+            --color-black: rgba(0, 0, 0, 1);
+            --color-cream-50: rgba(252, 252, 249, 1);
+            --color-gray-200: rgba(245, 245, 245, 1);
+            --color-gray-300: rgba(167, 169, 169, 1);
+            --color-slate-500: rgba(98, 108, 113, 1);
+            --color-slate-900: rgba(19, 52, 59, 1);
+            --color-teal-500: rgba(33, 128, 141, 1);
+            --color-teal-600: rgba(29, 116, 128, 1);
+
+            /* Custom Brochure Colors - Premium Palette */
+            --gradient-primary: linear-gradient(135deg, #0F3460 0%, #00A8E8 100%);
+            --gradient-hero: linear-gradient(135deg, #0F3460 0%, #00A8E8 70%, #00B8D4 100%);
+            --gradient-card: linear-gradient(135deg, rgba(15, 52, 96, 0.05) 0%, rgba(0, 168, 232, 0.05) 100%);
+            --color-accent-orange: #FF6B35;
+            --color-accent-gold: #FFBE0B;
+            --color-deep-blue: #0F3460;
+            --color-vibrant-teal: #00A8E8;
+
+            --font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            --space-8: 8px;
+            --space-12: 12px;
+            --space-16: 16px;
+            --space-24: 24px;
+            --space-32: 32px;
+            --space-48: 48px;
+            --space-64: 64px;
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+            --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.16);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-family-base);
+            line-height: 1.6;
+            color: var(--color-slate-900);
+            background-color: var(--color-cream-50);
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: var(--gradient-hero);
+            color: white;
+            padding: var(--space-64) var(--space-24);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: var(--space-16);
+            text-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: var(--space-24);
+            opacity: 0.95;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .hero-tagline {
+            font-size: 1.1rem;
+            margin-bottom: var(--space-16);
+            opacity: 0.9;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+
+        .hero-description {
+            font-size: 1rem;
+            margin-bottom: var(--space-32);
+            opacity: 0.85;
+            animation: fadeInUp 0.8s ease-out 0.6s both;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: var(--space-16) var(--space-48);
+            background: var(--color-accent-orange);
+            color: white;
+            text-decoration: none;
+            border-radius: var(--radius-lg);
+            font-size: 1.2rem;
+            font-weight: 700;
+            box-shadow: 0 4px 20px rgba(255, 107, 53, 0.4);
+            transition: all 0.3s ease;
+            animation: fadeInUp 0.8s ease-out 0.8s both;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 28px rgba(255, 107, 53, 0.5);
+            background: #ff5722;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-24);
+        }
+
+        /* Section Styles */
+        section {
+            padding: var(--space-64) 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: var(--space-16);
+            color: var(--color-deep-blue);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: var(--color-slate-500);
+            margin-bottom: var(--space-48);
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Ad Formats Grid */
+        .ad-formats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-24);
+            margin-bottom: var(--space-32);
+        }
+
+        .ad-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: var(--space-24);
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .ad-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--color-vibrant-teal);
+        }
+
+        .ad-card-icon {
+            font-size: 3rem;
+            margin-bottom: var(--space-16);
+        }
+
+        .ad-card-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: var(--space-12);
+            color: var(--color-deep-blue);
+        }
+
+        .ad-card-description {
+            font-size: 0.95rem;
+            color: var(--color-slate-500);
+            margin-bottom: var(--space-16);
+        }
+
+        .ad-card-highlights {
+            list-style: none;
+            margin-bottom: var(--space-16);
+        }
+
+        .ad-card-highlights li {
+            font-size: 0.9rem;
+            color: var(--color-slate-900);
+            margin-bottom: var(--space-8);
+            padding-left: var(--space-24);
+            position: relative;
+        }
+
+        .ad-card-highlights li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--color-teal-500);
+            font-weight: bold;
+        }
+
+        .ad-card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: var(--space-16);
+            border-top: 1px solid var(--color-gray-200);
+        }
+
+        .min-spend {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--color-accent-orange);
+        }
+
+        .ideal-for {
+            font-size: 0.85rem;
+            color: var(--color-slate-500);
+            font-style: italic;
+        }
+
+        /* Phase 2 Section */
+        .phase2-section {
+            background: linear-gradient(135deg, rgba(0, 168, 232, 0.05) 0%, rgba(15, 52, 96, 0.08) 100%);
+            padding: var(--space-64) var(--space-24);
+            position: relative;
+            border-top: 4px solid var(--color-vibrant-teal);
+            border-bottom: 4px solid var(--color-vibrant-teal);
+        }
+
+        .phase2-badge {
+            display: inline-block;
+            background: var(--color-vibrant-teal);
+            color: white;
+            padding: var(--space-8) var(--space-24);
+            border-radius: var(--radius-md);
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: var(--space-24);
+            box-shadow: var(--shadow-md);
+        }
+
+        .phase2-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-32);
+            margin-bottom: var(--space-48);
+        }
+
+        .phase2-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: var(--space-32);
+            box-shadow: var(--shadow-md);
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 3px dashed var(--color-vibrant-teal);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .phase2-card::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(135deg, var(--color-vibrant-teal) 0%, var(--color-accent-gold) 100%);
+            opacity: 0;
+            z-index: -1;
+            border-radius: var(--radius-lg);
+            transition: opacity 0.3s ease;
+        }
+
+        .phase2-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--color-accent-gold);
+        }
+
+        .phase2-icon {
+            font-size: 4rem;
+            margin-bottom: var(--space-16);
+        }
+
+        .phase2-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: var(--space-16);
+            color: var(--color-deep-blue);
+        }
+
+        .phase2-description {
+            font-size: 1.05rem;
+            color: var(--color-slate-900);
+            margin-bottom: var(--space-16);
+            font-weight: 500;
+        }
+
+        .phase2-preview {
+            font-size: 0.9rem;
+            color: var(--color-slate-500);
+            font-style: italic;
+            padding-top: var(--space-12);
+            border-top: 1px solid var(--color-gray-200);
+        }
+
+        .phase2-benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-16);
+            margin-bottom: var(--space-48);
+        }
+
+        .phase2-benefit {
+            background: white;
+            padding: var(--space-16) var(--space-24);
+            border-radius: var(--radius-md);
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--color-teal-500);
+            box-shadow: var(--shadow-sm);
+            border-left: 4px solid var(--color-teal-500);
+        }
+
+        .phase2-cta-container {
+            text-align: center;
+            margin-top: var(--space-48);
+        }
+
+        .phase2-cta-button {
+            display: inline-block;
+            padding: 20px 48px;
+            background: var(--gradient-primary);
+            color: white;
+            text-decoration: none;
+            border-radius: var(--radius-lg);
+            font-size: 1.3rem;
+            font-weight: 700;
+            box-shadow: 0 6px 24px rgba(0, 168, 232, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .phase2-cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 32px rgba(0, 168, 232, 0.5);
+        }
+
+        .phase2-cta-description {
+            font-size: 1rem;
+            color: var(--color-slate-500);
+            margin-top: var(--space-16);
+            font-style: italic;
+        }
+
+        /* Pricing Section */
+        .pricing-section {
+            background: white;
+        }
+
+        .pricing-subsection {
+            margin-bottom: var(--space-64);
+        }
+
+        .pricing-subsection:last-child {
+            margin-bottom: 0;
+        }
+
+        .subsection-title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: var(--space-32);
+            color: var(--color-vibrant-teal);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-24);
+        }
+
+        .pricing-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: var(--space-32);
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+            border: 3px solid var(--color-gray-200);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+        }
+
+        .pricing-card.featured {
+            border-color: var(--color-accent-orange);
+            transform: scale(1.05);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .pricing-card.featured:hover {
+            transform: translateY(-8px) scale(1.07);
+        }
+
+        .pricing-badge {
+            display: inline-block;
+            background: var(--color-accent-orange);
+            color: white;
+            padding: var(--space-8) var(--space-16);
+            border-radius: var(--radius-sm);
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: var(--space-16);
+            text-transform: uppercase;
+        }
+
+        .pricing-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: var(--space-12);
+            color: var(--color-deep-blue);
+        }
+
+        .pricing-price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--color-vibrant-teal);
+            margin-bottom: var(--space-8);
+        }
+
+        .pricing-period {
+            font-size: 1rem;
+            color: var(--color-slate-500);
+            margin-bottom: var(--space-16);
+        }
+
+        .pricing-best-for {
+            font-size: 0.95rem;
+            color: var(--color-slate-500);
+            margin-bottom: var(--space-16);
+            padding-bottom: var(--space-16);
+            border-bottom: 1px solid var(--color-gray-200);
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: var(--space-24);
+        }
+
+        .pricing-features li {
+            font-size: 0.95rem;
+            color: var(--color-slate-900);
+            margin-bottom: var(--space-12);
+            padding-left: var(--space-24);
+            position: relative;
+        }
+
+        .pricing-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--color-teal-500);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .pricing-duration {
+            font-size: 0.9rem;
+            color: var(--color-slate-500);
+            font-style: italic;
+            margin-top: var(--space-16);
+            padding-top: var(--space-16);
+            border-top: 1px solid var(--color-gray-200);
+        }
+
+
+
+        /* Perfect For Section */
+        .perfect-for-section {
+            background: var(--gradient-card);
+            text-align: center;
+        }
+
+        .tags-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: var(--space-12);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .tag {
+            background: white;
+            color: var(--color-deep-blue);
+            padding: var(--space-12) var(--space-24);
+            border-radius: var(--radius-lg);
+            font-size: 1rem;
+            font-weight: 600;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+            border: 2px solid var(--color-vibrant-teal);
+        }
+
+        .tag:hover {
+            transform: scale(1.1);
+            background: var(--color-vibrant-teal);
+            color: white;
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Footer CTA */
+        .footer-cta {
+            background: var(--gradient-primary);
+            color: white;
+            padding: var(--space-64) var(--space-24);
+            text-align: center;
+        }
+
+        .footer-cta h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: var(--space-24);
+        }
+
+        .footer-cta p {
+            font-size: 1.2rem;
+            margin-bottom: var(--space-32);
+            opacity: 0.9;
+        }
+
+        .footer-cta .cta-button {
+            background: white;
+            color: var(--color-deep-blue);
+            box-shadow: 0 4px 20px rgba(255, 255, 255, 0.3);
+        }
+
+        .footer-cta .cta-button:hover {
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 6px 28px rgba(255, 255, 255, 0.4);
+        }
+
+        /* Chart Comparison (Pricing) */
+        .chart-section {
+            background: white;
+            padding: var(--space-48) 0;
+        }
+
+        .chart-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            padding: var(--space-32);
+            height: 400px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .subsection-title {
+                font-size: 1.5rem;
+            }
+
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+
+            .pricing-card.featured:hover {
+                transform: translateY(-8px) scale(1.02);
+            }
+
+            .ad-formats-grid,
+            .pricing-grid,
+            .ai-pricing-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Note Badge */
+        .note-badge {
+            display: inline-block;
+            background: rgba(255, 107, 53, 0.1);
+            color: var(--color-accent-orange);
+            padding: var(--space-8) var(--space-16);
+            border-radius: var(--radius-sm);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: var(--space-12);
+        }
+
+        /* Value Props Grid */
+        .value-props-grid {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-32);
+            margin: var(--space-32) 0;
+            flex-wrap: wrap;
+        }
+
+        .value-prop {
+            flex: 1 1 200px;
+            max-width: 260px;
+            background: var(--gradient-card);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            padding: var(--space-24) var(--space-16);
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .value-prop:hover {
+            box-shadow: var(--shadow-lg);
+            background: white;
+            border-color: var(--color-vibrant-teal);
+            transform: translateY(-4px);
+        }
+
+        .value-prop h3 {
+            font-size: 1.1rem;
+            margin: var(--space-12) 0 var(--space-8) 0;
+            color: var(--color-deep-blue);
+        }
+
+        .value-prop p {
+            font-size: 0.95rem;
+            color: var(--color-slate-500);
+            margin: 0;
+        }
+
+        .value-icon {
+            font-size: 2.5rem;
+            margin-bottom: var(--space-8);
+        }
+
+        /* Comparison Section */
+        .comparison-section {
+            background: var(--gradient-card);
+            padding: var(--space-48) var(--space-24);
+            margin-bottom: var(--space-48);
+            border-radius: var(--radius-lg);
+        }
+
+        .comparison-grid {
+            display: flex;
+            gap: var(--space-32);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .comparison-card {
+            flex: 1 1 280px;
+            max-width: 420px;
+            background: white;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            padding: var(--space-32) var(--space-24);
+            text-align: left;
+        }
+
+        .comparison-card.positive {
+            border: 3px solid var(--color-teal-500);
+        }
+
+        .comparison-card.negative {
+            border: 3px solid rgba(255, 107, 53, 0.4);
+            opacity: 0.85;
+        }
+
+        .comparison-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: var(--space-16);
+            font-weight: 700;
+            color: var(--color-deep-blue);
+        }
+
+        .comparison-card ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .comparison-card ul li {
+            margin-bottom: var(--space-12);
+            font-size: 1rem;
+            padding-left: var(--space-24);
+            position: relative;
+        }
+
+        .comparison-card.positive ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--color-teal-500);
+            font-weight: bold;
+        }
+
+        .comparison-card.negative ul li::before {
+            content: '✗';
+            position: absolute;
+            left: 0;
+            color: var(--color-accent-orange);
+            font-weight: bold;
+        }
+
+        /* Savings Badge */
+        .savings-badge {
+            display: inline-block;
+            background: rgba(255, 190, 11, 0.2);
+            color: var(--color-deep-blue);
+            padding: var(--space-8) var(--space-16);
+            border-radius: var(--radius-sm);
+            font-size: 0.95rem;
+            font-weight: 700;
+            margin-bottom: var(--space-16);
+            border: 2px solid var(--color-accent-gold);
+        }
+
+        /* Pricing CTA Buttons */
+        .pricing-cta {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            padding: var(--space-16) var(--space-32);
+            border-radius: var(--radius-md);
+            font-weight: 700;
+            font-size: 1.05rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin-top: var(--space-16);
+        }
+
+        .pricing-cta.primary {
+            background: var(--color-teal-500);
+            color: white;
+            box-shadow: var(--shadow-md);
+        }
+
+        .pricing-cta.primary:hover {
+            background: var(--color-accent-gold);
+            color: var(--color-deep-blue);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .pricing-cta.secondary {
+            background: transparent;
+            color: var(--color-deep-blue);
+            border: 2px solid var(--color-border);
+        }
+
+        .pricing-cta.secondary:hover {
+            background: var(--color-deep-blue);
+            color: white;
+            border-color: var(--color-deep-blue);
+        }
+
+        /* Guarantees Section */
+        .guarantees-section {
+            background: var(--gradient-card);
+            padding: var(--space-48) var(--space-24);
+            margin-top: var(--space-64);
+            border-radius: var(--radius-lg);
+        }
+
+        .guarantees-grid {
+            display: flex;
+            gap: var(--space-24);
+            justify-content: center;
+            margin: var(--space-32) 0;
+            flex-wrap: wrap;
+        }
+
+        .guarantee-badge {
+            background: white;
+            padding: var(--space-24) var(--space-20);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+            font-size: 1.05rem;
+            color: var(--color-teal-500);
+            font-weight: 700;
+            min-width: 180px;
+            flex: 1 1 180px;
+            max-width: 220px;
+            border: 2px solid var(--color-teal-500);
+        }
+
+        .guarantee-badge small {
+            display: block;
+            font-size: 0.85rem;
+            color: var(--color-slate-500);
+            margin-top: var(--space-8);
+            font-weight: 400;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Ads Booster</h1>
+            <div class="hero-subtitle">Premium Digital Promotion Platform for Serious SMEs</div>
+            <div class="hero-tagline">Predictable Results. Unlimited Campaigns. Professional Management.</div>
+            <div class="hero-description">Run unlimited campaigns with one subscription. Average clients see 3-5x ROAS
+                with our platform.</div>
+            <a href="#pricing" class="cta-button">Start Your Free Trial</a>
+        </div>
+    </section>
+
+    <!-- Value Props Section -->
+    <section style="background: white; padding: var(--space-48) 0;">
+        <div class="container">
+            <div class="value-props-grid">
+                <div class="value-prop">
+                    <div class="value-icon">⚡</div>
+                    <h3>Unlimited Campaigns</h3>
+                    <p>Run multiple ads simultaneously with one subscription</p>
+                </div>
+                <div class="value-prop">
+                    <div class="value-icon">📊</div>
+                    <h3>Real Results</h3>
+                    <p>Average clients see 3-5x ROAS with our platform</p>
+                </div>
+                <div class="value-prop">
+                    <div class="value-icon">🛡️</div>
+                    <h3>Risk-Free</h3>
+                    <p>7-day free trial + money-back guarantee</p>
+                </div>
+                <div class="value-prop">
+                    <div class="value-icon">🚀</div>
+                    <h3>Expert Support</h3>
+                    <p>Dedicated team to optimize your campaigns</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ad Formats Section -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">8 Professional Ad Formats</h2>
+            <p class="section-subtitle">All formats included in subscription plans. Run as many as you need, anytime.
+            </p>
+
+            <div class="ad-formats-grid">
+                <!-- Google Call Button Ads -->
+                <div class="ad-card">
+                    <div class="ad-card-icon">📞</div>
+                    <h3 class="ad-card-title">Google Call Button Ads</h3>
+                    <p class="ad-card-description">Instant customer calls. Zero website needed.</p>
+                    <ul class="ad-card-highlights">
+                        <li>"Call Now" button in Google Search</li>
+                        <li>High-intent leads</li>
+                        <li>Fast setup</li>
+                    </ul>
+                    <div class="ad-card-footer">
+                        <span class="min-spend">Min: ₹150/day</span>
+                    </div>
+                    <div class="ideal-for">Perfect for: Salons, repairs, clinics, gyms</div>
+                </div>
+
+                <!-- Google Landing Page Ads -->
+                <div class="ad-card">
+                    <div class="ad-card-icon">🌐</div>
+                    <h3 class="ad-card-title">Google Landing Page Ads</h3>
+                    <p class="ad-card-description">Upload HTML page directly to Google Ads</p>
+                    <ul class="ad-card-highlights">
+                        <li>Works for services &amp; retail</li>
+                        <li>2–5× higher conversions</li>
+                        <li>Instant deployment</li>
+                    </ul>
+                    <div class="ad-card-footer">
+                        <span class="min-spend">Min: ₹150–₹300/day</span>
+                    </div>
+                </div>
+
+                <!-- YouTube Video Ads -->
+                <div class="ad-card">
+                    <div class="ad-card-icon">▶️</div>
+                    <h3 class="ad-card-title">Google YouTube Video Ads</h3>
+                    <p class="ad-card-description">High-reach video advertising</p>
+                    <ul class="ad-card-highlights">
+                        <li>Low CPV (₹0.10–₹0.80)</li>
+                        <li>Local targeting radius</li>
+                        <li>Upload or AI generated</li>
+                    </ul>
+                    <div class="ad-card-footer">
+                        <span class="min-spend">Min: ₹100–₹200/day</span>
+                    </div>
+                </div>
+
+                <!-- Facebook Photo Ads -->
+                <div class="ad-card">
+                    <div class="ad-card-icon">📸</div>
+                    <h3 class="ad-card-title">Facebook Photo Ads</h3>
+                    <p class="ad-card-description">Client photos or AI-generated images</p>
+                    <ul class="ad-card-highlights">
+                        <li>High reach</li>
+                        <li>Perfect for offers &amp; promotions</li>
+                    </ul>
+                    <div class="ad-card-footer">
+                        <span class="min-spend">Min: ₹100/day</span>
+                    </div>
+                </div>
+
+                <!-- Facebook Video Ads -->
+                <div class="ad-card">
+                    <div class="ad-card-icon">🎬</div>
+                    <h3 class="ad-card-title">Facebook Video Ads</h3>
+                    <p class="ad-card-description">Client or AI-generated videos</p>
+                    <ul class="ad-card-highlights">
+                        <li>2–4× higher engagement</li>
+                        <li>Great for walk-throughs</li>
+                    </ul>
+                    <div class="ad-card-footer">
+                        <span class="min-spend">Min: ₹150/day</span>
+                    </div>
+                </div>
+
+                <!-- Instagram Photo Ads -->
+                <div class="ad-card">
+                    <div class="ad-card-icon">✨</div>
+                    <h3 class="ad-card-title">Instagram Photo Ads</h3>
+                    <p class="ad-card-description">Perfect for lifestyle brands</p>
+                    <ul class="ad-card-highlights">
+                        <li>Boutiques, salons, cafés</li>
+                        <li>Lifestyle products</li>
+                    </ul>
+                    <div class="ad-card-footer">
+                        <span class="min-spend">Min: ₹100/day</span>
+                    </div>
+                </div>
+
+                <!-- Instagram Reels Ads -->
+                <div class="ad-card">
+                    <div class="ad-card-icon">🎥</div>
+                    <h3 class="ad-card-title">Instagram Reels Ads</h3>
+                    <p class="ad-card-description">Vertical video for younger audiences</p>
+                    <ul class="ad-card-highlights">
+                        <li>AI Reels generation available</li>
+                        <li>High engagement</li>
+                    </ul>
+                    <div class="ad-card-footer">
+                        <span class="min-spend">Min: ₹150/day</span>
+                    </div>
+                </div>
+
+                <!-- WhatsApp Click-to-Chat Ads -->
+                <div class="ad-card">
+                    <div class="ad-card-icon">💬</div>
+                    <h3 class="ad-card-title">WhatsApp Click-to-Chat Ads</h3>
+                    <p class="ad-card-description">India's strongest conversion format</p>
+                    <ul class="ad-card-highlights">
+                        <li>Direct WhatsApp opens</li>
+                        <li>Perfect for enquiries</li>
+                        <li>Works for any business</li>
+                    </ul>
+                    <div class="ad-card-footer">
+                        <span class="min-spend">Min: ₹75–₹100/day</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing-section">
+        <div class="container">
+            <h2 class="section-title">Smart Pricing That Protects Your Investment</h2>
+            <p class="section-subtitle">Choose subscription for unlimited campaigns and better value</p>
+
+            <!-- Why Subscription Section -->
+            <div class="comparison-section">
+                <h3 class="subsection-title">Why Choose Subscription?</h3>
+                <div class="comparison-grid">
+                    <div class="comparison-card negative">
+                        <h4>❌ Per-Campaign Model</h4>
+                        <ul>
+                            <li>Unpredictable spending</li>
+                            <li>No optimization support</li>
+                            <li>High cost per campaign</li>
+                            <li>Difficult to track ROI</li>
+                            <li>Limited to one format</li>
+                        </ul>
+                    </div>
+                    <div class="comparison-card positive">
+                        <h4>✅ Subscription Model</h4>
+                        <ul>
+                            <li>Unlimited campaigns</li>
+                            <li>Dedicated optimization</li>
+                            <li>Predictable monthly cost</li>
+                            <li>Professional support included</li>
+                            <li>All 8 formats included</li>
+                            <li>Better results over time</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Per-Campaign Plans -->
+            <div class="pricing-subsection">
+                <h3 class="subsection-title">Per-Campaign Plans</h3>
+                <p class="section-subtitle" style="color: var(--color-accent-orange); font-weight: 600;">⚠️ Higher risk
+                    • Limited support • Better value with subscription below</p>
+
+                <div class="pricing-grid">
+                    <!-- Starter Pack -->
+                    <div class="pricing-card">
+                        <h4 class="pricing-name">Starter Campaign</h4>
+                        <div class="pricing-price">₹799</div>
+                        <div class="pricing-period">per campaign</div>
+                        <div class="pricing-best-for">One-time campaigns only</div>
+                        <ul class="pricing-features">
+                            <li>Google Call Ads OR Facebook Photo Ads</li>
+                            <li>Basic campaign setup</li>
+                            <li>Client uploads photos/videos</li>
+                        </ul>
+                        <div class="pricing-duration">Duration: 7 days</div>
+                        <a href="#" class="pricing-cta secondary">Choose Campaign</a>
+                    </div>
+
+                    <!-- Local Boost Pack -->
+                    <div class="pricing-card">
+                        <h4 class="pricing-name">Local Boost Campaign</h4>
+                        <div class="pricing-price">₹1,499</div>
+                        <div class="pricing-period">per campaign</div>
+                        <div class="pricing-best-for">Festival/seasonal campaigns</div>
+                        <ul class="pricing-features">
+                            <li>Google Call Ads</li>
+                            <li>Facebook + Instagram Photo Ads</li>
+                            <li>Up to 3 creative uploads</li>
+                            <li>Basic support</li>
+                        </ul>
+                        <div class="pricing-duration">Duration: 7-14 days</div>
+                        <a href="#" class="pricing-cta secondary">Choose Campaign</a>
+                    </div>
+
+                    <!-- Growth Pack -->
+                    <div class="pricing-card">
+                        <h4 class="pricing-name">Growth Campaign</h4>
+                        <div class="pricing-price">₹2,999</div>
+                        <div class="pricing-period">per campaign</div>
+                        <div class="pricing-best-for">Premium single campaigns</div>
+                        <ul class="pricing-features">
+                            <li>All Google ad formats</li>
+                            <li>Facebook + Instagram Video Ads</li>
+                            <li>Professional optimization</li>
+                            <li>Priority support</li>
+                        </ul>
+                        <div class="pricing-duration">Duration: 15-30 days</div>
+                        <a href="#" class="pricing-cta secondary">Choose Campaign</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Subscription Plans - RECOMMENDED -->
+            <div class="pricing-subsection">
+                <h3 class="subsection-title" style="color: var(--color-teal-500);">🌟 Subscription Plans - RECOMMENDED
+                </h3>
+                <p class="section-subtitle" style="color: var(--color-teal-500); font-weight: 600;">✅ Best value •
+                    Unlimited campaigns • Professional support</p>
+
+                <div class="pricing-grid">
+                    <!-- Monthly Subscription -->
+                    <div class="pricing-card featured">
+                        <span class="pricing-badge" style="background: var(--color-teal-500);">⭐ RECOMMENDED</span>
+                        <h4 class="pricing-name">Monthly Pro</h4>
+                        <div class="pricing-price">₹1,499</div>
+                        <div class="pricing-period">/month</div>
+                        <div class="pricing-best-for">Active businesses</div>
+                        <div class="savings-badge">Save up to 50% vs per-campaign</div>
+                        <ul class="pricing-features">
+                            <li>✓ Unlimited campaigns</li>
+                            <li>✓ All 8 ad formats</li>
+                            <li>✓ Unlimited uploads</li>
+                            <li>✓ Professional optimization</li>
+                            <li>✓ 24/7 support</li>
+                            <li>✓ Analytics dashboard</li>
+                        </ul>
+                        <a href="#" class="pricing-cta primary">Start Free Trial</a>
+                    </div>
+
+                    <!-- Annual Subscription -->
+                    <div class="pricing-card featured" style="border-color: var(--color-accent-gold);">
+                        <span class="pricing-badge"
+                            style="background: var(--color-accent-gold); color: var(--color-deep-blue);">⭐ BEST
+                            DEAL</span>
+                        <h4 class="pricing-name">Annual Premium</h4>
+                        <div class="pricing-price">₹14,999</div>
+                        <div class="pricing-period">/year</div>
+                        <div class="pricing-best-for">Committed businesses</div>
+                        <div class="savings-badge"
+                            style="background: var(--color-accent-gold); color: var(--color-deep-blue);">Save ₹3,000 +
+                            AI early access</div>
+                        <ul class="pricing-features">
+                            <li>✓ Everything in Monthly</li>
+                            <li>✓ Priority support</li>
+                            <li>✓ Custom reporting</li>
+                            <li>✓ Dedicated account manager</li>
+                            <li>✓ Bonus: 3 months free</li>
+                            <li>✓ Early access to AI Tools (Phase 2)</li>
+                        </ul>
+                        <a href="#" class="pricing-cta primary"
+                            style="background: var(--color-accent-gold); color: var(--color-deep-blue);">Get Best
+                            Deal</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Guarantees Section -->
+            <div class="guarantees-section">
+                <h3 class="subsection-title">🛡️ Risk-Free Guarantee</h3>
+                <div class="guarantees-grid">
+                    <div class="guarantee-badge">✓ 7-Day Free Trial<br><small>No credit card needed</small></div>
+                    <div class="guarantee-badge">✓ 30-Day Money-Back<br><small>No questions asked</small></div>
+                    <div class="guarantee-badge">✓ Cancel Anytime<br><small>No long-term commitment</small></div>
+                    <div class="guarantee-badge">✓ 24/7 Support<br><small>Always here to help</small></div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- Phase 2: AI Tools Coming Soon Section -->
+    <section class="phase2-section">
+        <div class="container">
+            <div class="phase2-badge">Coming Q1 2027</div>
+            <h2 class="section-title" style="color: var(--color-vibrant-teal);">Phase 2: AI-Powered Tools</h2>
+            <p class="section-subtitle" style="font-size: 1.2rem; color: var(--color-deep-blue); font-weight: 600;">
+                Elevate your campaigns with professional AI tools. Generate images, videos, and landing pages in
+                seconds.</p>
+
+            <div class="phase2-grid">
+                <!-- AI Image Generator -->
+                <div class="phase2-card">
+                    <div class="phase2-icon">🎨</div>
+                    <h3 class="phase2-title">AI Image Generator</h3>
+                    <p class="phase2-description">Create professional ad images and social graphics instantly</p>
+                    <p class="phase2-preview">Festival posters • Product photos • Promotional banners</p>
+                </div>
+
+                <!-- AI Video Generator -->
+                <div class="phase2-card">
+                    <div class="phase2-icon">🎬</div>
+                    <h3 class="phase2-title">AI Video Generator</h3>
+                    <p class="phase2-description">Convert photos into engaging promotional videos</p>
+                    <p class="phase2-preview">6-15 second ads for YouTube, Facebook, Instagram</p>
+                </div>
+
+                <!-- AI Landing Page Builder -->
+                <div class="phase2-card">
+                    <div class="phase2-icon">🏗️</div>
+                    <h3 class="phase2-title">AI Landing Page Builder</h3>
+                    <p class="phase2-description">Build professional landing pages without coding</p>
+                    <p class="phase2-preview">Mobile-optimized pages with CTAs, offers, and shop details</p>
+                </div>
+            </div>
+
+            <!-- Phase 2 Benefits -->
+            <div class="phase2-benefits">
+                <div class="phase2-benefit">✓ Create content 10x faster than manual methods</div>
+                <div class="phase2-benefit">✓ Professional quality without hiring designers</div>
+                <div class="phase2-benefit">✓ Fully integrated with your ad campaigns</div>
+                <div class="phase2-benefit">✓ No technical skills required</div>
+            </div>
+
+            <!-- Waitlist CTA -->
+            <div class="phase2-cta-container">
+                <a href="#waitlist" class="phase2-cta-button">Join Waitlist for Early-Bird Pricing</a>
+                <p class="phase2-cta-description">Be among the first to access AI tools with exclusive launch discounts
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Perfect For Section -->
+    <section class="perfect-for-section">
+        <div class="container">
+            <h2 class="section-title">⭐ Perfect For</h2>
+            <p class="section-subtitle">Ads Booster is designed for local businesses across all industries</p>
+            <div class="tags-container">
+                <div class="tag">Salons &amp; Spas</div>
+                <div class="tag">Restaurants &amp; Cafés</div>
+                <div class="tag">Gyms &amp; Fitness</div>
+                <div class="tag">E-commerce Stores</div>
+                <div class="tag">Real Estate Agencies</div>
+                <div class="tag">Repair Services</div>
+                <div class="tag">Beauty &amp; Boutiques</div>
+                <div class="tag">Clinics &amp; Healthcare</div>
+                <div class="tag">Tuition Centers</div>
+                <div class="tag">Automotive Services</div>
+                <div class="tag">Grocery Stores</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chart Comparison Section -->
+    <section class="chart-section">
+        <div class="container">
+            <h3 class="section-title" style="font-size: 2rem;">Cost Comparison: Why Subscription Wins</h3>
+            <p class="section-subtitle">See how much you save with Monthly or Annual subscription vs running campaigns
+                individually</p>
+            <div class="chart-container">
+                <canvas id="costComparisonChart"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="footer-cta">
+        <div class="container">
+            <h2>Ready to Boost Your Business?</h2>
+            <p>Protect your investment &amp; grow faster with professional, risk-free ads. Thousands of SMEs trust us
+                for predictable ROI.</p>
+            <a href="#pricing" class="cta-button" style="background: var(--color-teal-500); color: white;">Start Your
+                Free Trial</a>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section style="background:white; padding: var(--space-48) 0;">
+        <div class="container">
+            <h3 class="section-title" style="font-size:2rem;">What Businesses Say</h3>
+            <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:32px; padding-top:24px;">
+                <div
+                    style="background:var(--gradient-card); border-radius:12px; box-shadow:var(--shadow-sm); padding:24px 32px; min-width:260px; max-width:340px;">
+                    <span style="font-size:1.15rem; font-style:italic; color:var(--color-deep-blue);">“Increased calls
+                        by 150% in first month”</span><br>
+                    <span style="font-weight:bold; color:var(--color-teal-500);">Delhi Hair Salon</span>
+                </div>
+                <div
+                    style="background:var(--gradient-card); border-radius:12px; box-shadow:var(--shadow-sm); padding:24px 32px; min-width:260px; max-width:340px;">
+                    <span style="font-size:1.15rem; font-style:italic; color:var(--color-deep-blue);">“Best investment
+                        for our local business”</span><br>
+                    <span style="font-weight:bold; color:var(--color-teal-500);">Mumbai Restaurant</span>
+                </div>
+                <div
+                    style="background:var(--gradient-card); border-radius:12px; box-shadow:var(--shadow-sm); padding:24px 32px; min-width:260px; max-width:340px;">
+                    <span style="font-size:1.15rem; font-style:italic; color:var(--color-deep-blue);">“Professional
+                        results at affordable price”</span><br>
+                    <span style="font-weight:bold; color:var(--color-teal-500);">Bangalore E-commerce</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Clear comparison: Annual cost if running 1 campaign per month
+        const ctx = document.getElementById('costComparisonChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['1 Campaign/Month\n(Growth Pack)', '2 Campaigns/Month\n(Growth Pack)', 'Monthly Pro\nSubscription', 'Annual Premium\nSubscription'],
+                datasets: [
+                    {
+                        label: 'Annual Cost (₹)',
+                        data: [35988, 71976, 17988, 14999],
+                        backgroundColor: ['#B4413C', '#FF6B35', '#00A8E8', '#FFBE0B'],
+                        borderColor: ['#943530', '#E65A2B', '#0092C7', '#E0A900'],
+                        borderWidth: 2
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function (context) {
+                                return 'Annual Cost: ₹' + context.parsed.y.toLocaleString();
+                            }
+                        },
+                        backgroundColor: 'rgba(15, 52, 96, 0.95)',
+                        titleFont: { size: 14, weight: 'bold' },
+                        bodyFont: { size: 13 },
+                        padding: 12
+                    }
+                },
+                scales: {
+                    x: {
+                        ticks: {
+                            color: '#0F3460',
+                            font: {
+                                size: 12,
+                                weight: 'bold'
+                            }
+                        },
+                        grid: {
+                            display: false
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Annual Cost (₹)',
+                            color: '#0F3460',
+                            font: {
+                                size: 14,
+                                weight: 'bold'
+                            }
+                        },
+                        ticks: {
+                            color: '#0F3460',
+                            font: {
+                                size: 12
+                            },
+                            callback: function (value) {
+                                return '₹' + value.toLocaleString();
+                            }
+                        },
+                        beginAtZero: true,
+                        grid: {
+                            color: 'rgba(15, 52, 96, 0.1)'
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
