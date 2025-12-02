@@ -401,6 +401,7 @@
         }
 
         .pricing-subsection {
+            max-width: 1200px;
             margin-bottom: var(--space-64);
         }
 
@@ -420,6 +421,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: var(--space-24);
+            gap: 48px;
         }
 
         .pricing-card {
@@ -428,7 +430,7 @@
             padding: var(--space-32);
             box-shadow: var(--shadow-md);
             transition: all 0.3s ease;
-            border: 3px solid var(--color-gray-200);
+            /* border: 3px solid var(--color-gray-200); */
             position: relative;
             overflow: hidden;
         }
@@ -794,7 +796,7 @@
             display: inline-block;
             width: 100%;
             text-align: center;
-            padding: var(--space-16) var(--space-32);
+            padding: var(--space-16) var(--space-16);
             border-radius: var(--radius-md);
             font-weight: 700;
             font-size: 1.05rem;
@@ -819,7 +821,7 @@
         .pricing-cta.secondary {
             background: transparent;
             color: var(--color-deep-blue);
-            border: 2px solid var(--color-border);
+            border: 2px solid var(--color-teal-500);
         }
 
         .pricing-cta.secondary:hover {
@@ -874,10 +876,10 @@
     <section class="hero">
         <div class="hero-content">
             <h1>Ads Booster</h1>
-            <div class="hero-subtitle">Premium Digital Promotion Platform for Serious SMEs</div>
+            <div class="hero-subtitle">Professional ad campaigns for local businesses — without hiring an agency.</div>
             <div class="hero-tagline">Predictable Results. Unlimited Campaigns. Professional Management.</div>
-            <div class="hero-description">Run unlimited campaigns with one subscription. Average clients see 3-5x ROAS
-                with our platform.</div>
+            <div class="hero-description">Our clients grow 3–5× faster with unlimited ad campaigns, expert optimization,
+                and predictable monthly pricing.</div>
             <a href="#pricing" class="cta-button">Start Your Free Trial</a>
         </div>
     </section>
@@ -913,8 +915,8 @@
     <!-- Ad Formats Section -->
     <section>
         <div class="container">
-            <h2 class="section-title">8 Professional Ad Formats</h2>
-            <p class="section-subtitle">All formats included in subscription plans. Run as many as you need, anytime.
+            <h2 class="section-title">All Major Ad Formats — Included in Every Plan</h2>
+            <p class="section-subtitle">Choose any format. Run unlimited campaigns. We handle everything end-to-end.
             </p>
 
             <div class="ad-formats-grid">
@@ -922,25 +924,26 @@
                 <div class="ad-card">
                     <div class="ad-card-icon">📞</div>
                     <h3 class="ad-card-title">Google Call Button Ads</h3>
-                    <p class="ad-card-description">Instant customer calls. Zero website needed.</p>
+                    <p class="ad-card-description">Instant calls directly from Google Search — perfect for service
+                        businesses.</p>
                     <ul class="ad-card-highlights">
-                        <li>"Call Now" button in Google Search</li>
+                        <li>"Call Now" button on Google Search</li>
                         <li>High-intent leads</li>
-                        <li>Fast setup</li>
+                        <li>No website required</li>
                     </ul>
                     <div class="ad-card-footer">
                         <span class="min-spend">Min: ₹150/day</span>
                     </div>
-                    <div class="ideal-for">Perfect for: Salons, repairs, clinics, gyms</div>
                 </div>
 
                 <!-- Google Landing Page Ads -->
                 <div class="ad-card">
                     <div class="ad-card-icon">🌐</div>
                     <h3 class="ad-card-title">Google Landing Page Ads</h3>
-                    <p class="ad-card-description">Upload HTML page directly to Google Ads</p>
+                    <p class="ad-card-description">Use your HTML landing page for higher conversions and fast approvals.
+                    </p>
                     <ul class="ad-card-highlights">
-                        <li>Works for services &amp; retail</li>
+                        <li>Best for services & retail</li>
                         <li>2–5× higher conversions</li>
                         <li>Instant deployment</li>
                     </ul>
@@ -953,11 +956,11 @@
                 <div class="ad-card">
                     <div class="ad-card-icon">▶️</div>
                     <h3 class="ad-card-title">Google YouTube Video Ads</h3>
-                    <p class="ad-card-description">High-reach video advertising</p>
+                    <p class="ad-card-description">Use YouTube for massive reach with low-cost video views.</p>
                     <ul class="ad-card-highlights">
                         <li>Low CPV (₹0.10–₹0.80)</li>
-                        <li>Local targeting radius</li>
-                        <li>Upload or AI generated</li>
+                        <li>Radius-based local targeting</li>
+                        <li>Great for awareness</li>
                     </ul>
                     <div class="ad-card-footer">
                         <span class="min-spend">Min: ₹100–₹200/day</span>
@@ -968,10 +971,10 @@
                 <div class="ad-card">
                     <div class="ad-card-icon">📸</div>
                     <h3 class="ad-card-title">Facebook Photo Ads</h3>
-                    <p class="ad-card-description">Client photos or AI-generated images</p>
+                    <p class="ad-card-description">High-engagement ads using client or AI-generated photos.</p>
                     <ul class="ad-card-highlights">
-                        <li>High reach</li>
-                        <li>Perfect for offers &amp; promotions</li>
+                        <li>Perfect for offers & promotions</li>
+                        <li>Large audience reach</li>
                     </ul>
                     <div class="ad-card-footer">
                         <span class="min-spend">Min: ₹100/day</span>
@@ -982,10 +985,10 @@
                 <div class="ad-card">
                     <div class="ad-card-icon">🎬</div>
                     <h3 class="ad-card-title">Facebook Video Ads</h3>
-                    <p class="ad-card-description">Client or AI-generated videos</p>
+                    <p class="ad-card-description">Short, powerful videos for maximum engagement.</p>
                     <ul class="ad-card-highlights">
                         <li>2–4× higher engagement</li>
-                        <li>Great for walk-throughs</li>
+                        <li>Great for walkthroughs & demos</li>
                     </ul>
                     <div class="ad-card-footer">
                         <span class="min-spend">Min: ₹150/day</span>
@@ -996,10 +999,10 @@
                 <div class="ad-card">
                     <div class="ad-card-icon">✨</div>
                     <h3 class="ad-card-title">Instagram Photo Ads</h3>
-                    <p class="ad-card-description">Perfect for lifestyle brands</p>
+                    <p class="ad-card-description">Highly engaging visuals for lifestyle and retail brands.</p>
                     <ul class="ad-card-highlights">
-                        <li>Boutiques, salons, cafés</li>
-                        <li>Lifestyle products</li>
+                        <li>Salons, cafés, boutiques</li>
+                        <li>Ideal for retail products</li>
                     </ul>
                     <div class="ad-card-footer">
                         <span class="min-spend">Min: ₹100/day</span>
@@ -1010,7 +1013,7 @@
                 <div class="ad-card">
                     <div class="ad-card-icon">🎥</div>
                     <h3 class="ad-card-title">Instagram Reels Ads</h3>
-                    <p class="ad-card-description">Vertical video for younger audiences</p>
+                    <p class="ad-card-description">Vertical video ads built for younger, mobile-first customers.</p>
                     <ul class="ad-card-highlights">
                         <li>AI Reels generation available</li>
                         <li>High engagement</li>
@@ -1024,10 +1027,11 @@
                 <div class="ad-card">
                     <div class="ad-card-icon">💬</div>
                     <h3 class="ad-card-title">WhatsApp Click-to-Chat Ads</h3>
-                    <p class="ad-card-description">India's strongest conversion format</p>
+                    <p class="ad-card-description">India’s strongest conversion format — drives direct WhatsApp chats.
+                    </p>
                     <ul class="ad-card-highlights">
-                        <li>Direct WhatsApp opens</li>
-                        <li>Perfect for enquiries</li>
+                        <li>Opens WhatsApp directly</li>
+                        <li>Ideal for enquiries & bookings</li>
                         <li>Works for any business</li>
                     </ul>
                     <div class="ad-card-footer">
@@ -1043,32 +1047,38 @@
     <!-- Pricing Section -->
     <section id="pricing" class="pricing-section">
         <div class="container">
-            <h2 class="section-title">Smart Pricing That Protects Your Investment</h2>
-            <p class="section-subtitle">Choose subscription for unlimited campaigns and better value</p>
+            <h2 class="section-title">Smart Pricing That Protects Your Ad Spend</h2>
+            <p class="section-subtitle">Choose subscription if you run ads regularly. Use per-campaign plans only for
+                one-time or trial campaigns. <br>
+                <span class="section-subtitle" style="font-size: 0.9rem; opacity: 0.85;">
+                    <strong>Note:</strong> Ad spend is paid directly to Google / Meta. Our fees cover setup, management
+                    & optimization only.
+                </span>
+            </p>
+
 
             <!-- Why Subscription Section -->
             <div class="comparison-section">
-                <h3 class="subsection-title">Why Choose Subscription?</h3>
+                <h3 class="subsection-title">Why Choose Subscription Instead of Per-Campaign?</h3>
                 <div class="comparison-grid">
                     <div class="comparison-card negative">
                         <h4>❌ Per-Campaign Model</h4>
                         <ul>
-                            <li>Unpredictable spending</li>
-                            <li>No optimization support</li>
-                            <li>High cost per campaign</li>
-                            <li>Difficult to track ROI</li>
-                            <li>Limited to one format</li>
+                            <li>Unpredictable overall spending</li>
+                            <li>Limited optimization during campaign</li>
+                            <li>High cost if you run campaigns every month</li>
+                            <li>Hard to build long-term strategy</li>
+                            <li>Usually covers only 1–2 ad formats</li>
                         </ul>
                     </div>
                     <div class="comparison-card positive">
                         <h4>✅ Subscription Model</h4>
                         <ul>
-                            <li>Unlimited campaigns</li>
-                            <li>Dedicated optimization</li>
-                            <li>Predictable monthly cost</li>
-                            <li>Professional support included</li>
-                            <li>All 8 formats included</li>
-                            <li>Better results over time</li>
+                            <li>Unlimited campaigns every month</li>
+                            <li>Ongoing monitoring and performance improvements</li>
+                            <li>Predictable fixed monthly or yearly fee</li>
+                            <li>All 8 ad formats included</li>
+                            <li>Better performance as data & history grow</li>
                         </ul>
                     </div>
                 </div>
@@ -1078,54 +1088,65 @@
             <div class="pricing-subsection">
                 <h3 class="subsection-title">Per-Campaign Plans</h3>
                 <p class="section-subtitle" style="color: var(--color-accent-orange); font-weight: 600;">⚠️ Higher risk
-                    • Limited support • Better value with subscription below</p>
+                    • Limited optimization • Best only for testing or short-term promotions. Subscription below gives
+                    much better value.</p>
 
                 <div class="pricing-grid">
-                    <!-- Starter Pack -->
+                    <!-- Starter Campaign -->
                     <div class="pricing-card">
                         <h4 class="pricing-name">Starter Campaign</h4>
-                        <div class="pricing-price">₹799</div>
+                        <div class="pricing-price">₹999</div>
                         <div class="pricing-period">per campaign</div>
-                        <div class="pricing-best-for">One-time campaigns only</div>
+
+                        <div class="pricing-best-for">Best for: One-time testing or small promotions</div>
+
                         <ul class="pricing-features">
-                            <li>Google Call Ads OR Facebook Photo Ads</li>
-                            <li>Basic campaign setup</li>
-                            <li>Client uploads photos/videos</li>
+                            <li>Choose <strong>any 2</strong> ad formats (Google / Meta)</li>
+                            <li>Full campaign setup & launch</li>
+                            <li>Client provides photos/videos</li>
+                            <li>End-of-campaign performance summary</li>
                         </ul>
+
                         <div class="pricing-duration">Duration: 7 days</div>
-                        <a href="#" class="pricing-cta secondary">Choose Campaign</a>
+                        <a href="#" class="pricing-cta secondary">Choose Starter Campaign</a>
                     </div>
 
-                    <!-- Local Boost Pack -->
-                    <div class="pricing-card">
-                        <h4 class="pricing-name">Local Boost Campaign</h4>
-                        <div class="pricing-price">₹1,499</div>
-                        <div class="pricing-period">per campaign</div>
-                        <div class="pricing-best-for">Festival/seasonal campaigns</div>
-                        <ul class="pricing-features">
-                            <li>Google Call Ads</li>
-                            <li>Facebook + Instagram Photo Ads</li>
-                            <li>Up to 3 creative uploads</li>
-                            <li>Basic support</li>
-                        </ul>
-                        <div class="pricing-duration">Duration: 7-14 days</div>
-                        <a href="#" class="pricing-cta secondary">Choose Campaign</a>
-                    </div>
-
-                    <!-- Growth Pack -->
+                    <!-- Growth Campaign -->
                     <div class="pricing-card">
                         <h4 class="pricing-name">Growth Campaign</h4>
-                        <div class="pricing-price">₹2,999</div>
+                        <div class="pricing-price">₹1,999</div>
                         <div class="pricing-period">per campaign</div>
-                        <div class="pricing-best-for">Premium single campaigns</div>
+
+                        <div class="pricing-best-for">Best for: Festival / seasonal / short-term promotions</div>
+
                         <ul class="pricing-features">
-                            <li>All Google ad formats</li>
-                            <li>Facebook + Instagram Video Ads</li>
-                            <li>Professional optimization</li>
-                            <li>Priority support</li>
+                            <li>Choose <strong>any 4</strong> ad formats (Google / Meta)</li>
+                            <li>Includes Photo + Video creatives (if provided)</li>
+                            <li>Up to 3 creative uploads</li>
+                            <li>Mid-campaign check & minor adjustments</li>
                         </ul>
-                        <div class="pricing-duration">Duration: 15-30 days</div>
-                        <a href="#" class="pricing-cta secondary">Choose Campaign</a>
+
+                        <div class="pricing-duration">Duration: 15 days</div>
+                        <a href="#" class="pricing-cta secondary">Choose Growth Campaign</a>
+                    </div>
+
+                    <!-- Premium Campaign -->
+                    <div class="pricing-card">
+                        <h4 class="pricing-name">Premium Campaign</h4>
+                        <div class="pricing-price">₹3,999</div>
+                        <div class="pricing-period">per campaign</div>
+
+                        <div class="pricing-best-for">Best for: High-priority promotions & maximum visibility</div>
+
+                        <ul class="pricing-features">
+                            <li><strong>All 8</strong> ad formats included (Google + Meta)</li>
+                            <li>Photo + Video + Reels support</li>
+                            <li>Professional optimization & improvements</li>
+                            <li>Priority WhatsApp support</li>
+                        </ul>
+
+                        <div class="pricing-duration">Duration: 30 days</div>
+                        <a href="#" class="pricing-cta secondary">Choose Premium Campaign</a>
                     </div>
 
                 </div>
@@ -1133,54 +1154,55 @@
 
             <!-- Subscription Plans - RECOMMENDED -->
             <div class="pricing-subsection">
-                <h3 class="subsection-title" style="color: var(--color-teal-500);">🌟 Subscription Plans - RECOMMENDED
+                <h3 class="subsection-title" style="color: var(--color-teal-500);">🌟 Subscription Plans – Recommended
+                    for Serious Businesses
                 </h3>
                 <p class="section-subtitle" style="color: var(--color-teal-500); font-weight: 600;">✅ Best value •
-                    Unlimited campaigns • Professional support</p>
+                    Unlimited campaigns • Long-term optimization & support</p>
 
                 <div class="pricing-grid">
                     <!-- Monthly Subscription -->
                     <div class="pricing-card featured">
-                        <span class="pricing-badge" style="background: var(--color-teal-500);">⭐ RECOMMENDED</span>
+                        <span class="pricing-badge" style="background: var(--color-teal-500);">⭐ MOST POPULAR</span>
                         <h4 class="pricing-name">Monthly Pro</h4>
-                        <div class="pricing-price">₹1,499</div>
+                        <div class="pricing-price">₹1,999</div>
                         <div class="pricing-period">/month</div>
-                        <div class="pricing-best-for">Active businesses</div>
-                        <div class="savings-badge">Save up to 50% vs per-campaign</div>
+                        <div class="pricing-best-for">Best for: Active local businesses</div>
+                        <div class="savings-badge">Save up to 50% vs multiple per-campaign plans</div>
                         <ul class="pricing-features">
-                            <li>Unlimited campaigns</li>
-                            <li>All 8 ad formats</li>
-                            <li>Unlimited uploads</li>
-                            <li>Professional optimization</li>
-                            <li>24/7 support</li>
-                            <li>Analytics dashboard</li>
+                            <li>Unlimited campaigns every month</li>
+                            <li>All 8 ad formats (Google, Facebook, Instagram, WhatsApp)</li>
+                            <li>Unlimited creative uploads</li>
+                            <li>Ongoing optimization & A/B testing</li>
+                            <li>Email & WhatsApp support</li>
+                            <li>Performance summary report every month</li>
                         </ul>
                         <a href="#" class="pricing-cta primary">Start Free Trial</a>
                     </div>
 
                     <!-- Annual Subscription -->
                     <div class="pricing-card featured" style="border-color: var(--color-accent-gold);">
-                        <span class="pricing-badge"
-                            style="background: var(--color-accent-gold); color: var(--color-deep-blue);">⭐ BEST
-                            DEAL</span>
+                        <span class="pricing-badge" style="background: var(--color-teal-500);">
+                            ⭐ BEST DEAL
+                        </span>
                         <h4 class="pricing-name">Annual Premium</h4>
-                        <div class="pricing-price">₹14,999</div>
+                        <div class="pricing-price">₹19,999</div>
                         <div class="pricing-period">/year</div>
-                        <div class="pricing-best-for">Committed businesses</div>
-                        <div class="savings-badge"
-                            style="background: var(--color-accent-gold); color: var(--color-deep-blue);">Save ₹3,000 +
-                            AI early access</div>
+                        <div class="pricing-best-for">Best for: Businesses committed to long-term growth</div>
+                        <div class="savings-badge">
+                            Save ~₹4,000 vs monthly — plus get extra benefits.
+                        </div>
                         <ul class="pricing-features">
-                            <li>Everything in Monthly</li>
-                            <li>Priority support</li>
-                            <li>Custom reporting</li>
+                            <li>Everything in Monthly Pro</li>
+                            <li>Priority support response</li>
+                            <li>Quarterly strategy review call</li>
+                            <li>Custom reporting on request</li>
                             <li>Dedicated account manager</li>
-                            <li>Bonus: 3 months free</li>
-                            <li>Early access to AI Tools (Phase 2)</li>
+                            <li>Early access to AI tools (Phase 2)</li>
                         </ul>
-                        <a href="#" class="pricing-cta primary"
-                            style="background: var(--color-accent-gold); color: var(--color-deep-blue);">Get Best
-                            Deal</a>
+                        <a href="#" class="pricing-cta primary">
+                            Get Best Deal
+                        </a>
                     </div>
                 </div>
             </div>
@@ -1204,10 +1226,10 @@
     <section class="phase2-section">
         <div class="container">
             <div class="phase2-badge">Coming Q1 2027</div>
-            <h2 class="section-title" style="color: var(--color-vibrant-teal);">Phase 2: AI-Powered Tools</h2>
+            <h2 class="section-title" style="color: var(--color-vibrant-teal);">Phase 2: AI Tools for Faster, Better
+                Campaigns</h2>
             <p class="section-subtitle" style="font-size: 1.2rem; color: var(--color-deep-blue); font-weight: 600;">
-                Elevate your campaigns with professional AI tools. Generate images, videos, and landing pages in
-                seconds.</p>
+                Create ad images, videos, and landing pages in seconds — no designer needed.</p>
 
             <div class="phase2-grid">
                 <!-- AI Image Generator -->
@@ -1329,11 +1351,11 @@
         new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ['1 Campaign/Month\n(Growth Pack)', '2 Campaigns/Month\n(Growth Pack)', 'Monthly Pro\nSubscription', 'Annual Premium\nSubscription'],
+                labels: ['1 Campaign/Month\n(Premium Pack)', '2 Campaigns/Month\n(Premium Pack)', 'Monthly Pro\nSubscription', 'Annual Premium\nSubscription'],
                 datasets: [
                     {
                         label: 'Annual Cost (₹)',
-                        data: [35988, 71976, 17988, 14999],
+                        data: [47988, 95976, 23988, 19999],
                         backgroundColor: ['#B4413C', '#FF6B35', '#00A8E8', '#FFBE0B'],
                         borderColor: ['#943530', '#E65A2B', '#0092C7', '#E0A900'],
                         borderWidth: 2
